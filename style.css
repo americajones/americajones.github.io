@@ -1,0 +1,28 @@
+body {
+  background-color: rgb(26, 26, 26);
+  color: rgb(207, 219, 219);
+}
+.container {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.pixelheartbox {
+  height: 6em;
+  width: 7em;
+}
+.pixelheart {
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-shadow: 1em 0em #f22613, 2em 0em #f22613, 4em 0em #f22613, 5em 0em #f22613,
+    0em 1em #f22613, 1em 1em #f22613, 2em 1em #f22613, 3em 1em #f22613,
+    4em 1em #f22613, 5em 1em #f22613, 6em 1em #f22613, 0em 2em #f22613,
+    1em 2em #f22613, 2em 2em #f22613, 3em 2em #f22613, 4em 2em #f22613,
+    5em 2em #f22613, 6em 2em #f22613, 1em 3em #f22613, 2em 3em #f22613,
+    3em 3em #f22613, 4em 3em #f22613, 5em 3em #f22613, 2em 4em #f22613,
+    3em 4em #f22613, 4em 4em #f22613, 3em 5em #f22613;
+  margin-right: 8em;
+  margin-bottom: 8em;
+}

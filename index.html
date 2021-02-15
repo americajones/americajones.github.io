@@ -2,16 +2,27 @@
 <html>
   <head>
     <title>ARThous</title>
-    <style>
-      body {
-        background-color: rgb(26, 26, 26);
-        color: rgb(207, 219, 219);
-      }
-    </style>
+    <link rel="stylesheet" lang="text/css" href="style.css" />
   </head>
 
   <body>
     <h1>hello ART</h1>
-    <script></script>
+    <div class="container">
+      <div class="pixelheartbox">
+        <div class="pixelheart"></div>
+      </div>
+    </div>
+    <script>
+      var heart = document.querySelector(".pixelheart");
+      var heartBox = document.querySelector(".pixelheartbox");
+      function dupliheart() {
+        var newHeart = document.createElement("div");
+        newHeart.classList.add("pixelheart");
+        heartBox.append(newHeart);
+      }
+      heartBox.addEventListener("click", function () {
+        dupliheart();
+      });
+    </script>
   </body>
 </html>
