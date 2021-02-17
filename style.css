@@ -3,12 +3,14 @@ body {
   color: rgb(207, 219, 219);
 }
 .container {
-  max-height: 100vh;
+  height: 666px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .pixelheartbox {
+  position: relative;
   height: 6em;
   width: 7em;
 }
