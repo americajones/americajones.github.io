@@ -6,10 +6,11 @@ body {
   height: 666px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 .pixelheartbox {
+  float: left;
   position: relative;
   height: 6em;
   width: 7em;
@@ -27,4 +28,16 @@ body {
     3em 4em #f22613, 4em 4em #f22613, 3em 5em #f22613;
   margin-right: 8em;
   margin-bottom: 8em;
+}
+.blips {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+  display: block;
+  width: 1em;
+  height: 1em;
+  box-shadow: 2em 0em #0400ff, 3em 0em #0400ff, 4em 0em #0400ff, 1em 1em #0400ff,
+    1em 2em #0400ff, 1em 3em #0400ff, 5em 1em #0400ff, 5em 2em #0400ff,
+    2em 4em #0400ff, 3em 4em #0400ff, 4em 4em #0400ff, 5em 3em #0400ff;
+  transform: rotate(45deg) scale(0.5);
 }

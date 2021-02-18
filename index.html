@@ -11,6 +11,13 @@
       <div class="pixelheartbox">
         <div class="pixelheart"></div>
       </div>
+      <div class="blu blips"></div>
+      <div class="blu blips"></div>
+      <div class="blu blips"></div>
+      <div class="blu blips"></div>
+      <div class="blu blips"></div>
+      <div class="blu blips"></div>
+      <div class="blu blips"></div>
     </div>
     <script>
       var heart = document.querySelector(".pixelheart");
@@ -24,6 +31,28 @@
       heartBox.addEventListener("click", function () {
         dupliheart();
       });
+      // collect all the divs
+      var divs = document.querySelectorAll(".blu");
+      // get window width and height
+      var winWidth = window.innerWidth;
+      var winHeight = window.innerHeight;
+      console.log(divs);
+      for (var i = 0; i < divs.length; i++) {
+        var thisDiv = divs[i];
+
+        // get random numbers for each element
+        randomTop = getRandomNumber(0, winHeight);
+        randomLeft = getRandomNumber(0, winWidth);
+
+        // update top and left position
+        thisDiv.style.top = randomTop + "px";
+        thisDiv.style.left = randomLeft + "px";
+      }
+
+      // function that returns a random number between a min and max
+      function getRandomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+      }
     </script>
   </body>
 </html>
