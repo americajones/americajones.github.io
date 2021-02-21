@@ -6,7 +6,7 @@
   </head>
 
   <body>
-    <h1>hello ART</h1>
+    <h1 class="artBox">hello ART</h1>
     <div class="container">
       <div class="pixelheartbox">
         <div class="pixelheart"></div>
@@ -22,6 +22,8 @@
     <script>
       var heart = document.querySelector(".pixelheart");
       var heartBox = document.querySelector(".pixelheartbox");
+      var artbox = document.querySelector(".artBox");
+      var divs = document.querySelectorAll(".blu");
       function dupliheart() {
         var newHeart = document.createElement("div");
         newHeart.classList.add("pixelheart");
@@ -31,8 +33,20 @@
       heartBox.addEventListener("click", function () {
         dupliheart();
       });
-      // collect all the divs
-      var divs = document.querySelectorAll(".blu");
+      artbox.addEventListener("click", function () {
+        for (var i = 0; i < divs.length; i++) {
+          var thisDiv = divs[i];
+
+          randomTop = getRandomNumber(0, winHeight);
+          randomLeft = getRandomNumber(0, winWidth);
+
+          thisDiv.style.top = randomTop + "px";
+          thisDiv.style.left = randomLeft + "px";
+        }
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        console.log(randomColor);
+        artbox.style.color = "#" + randomColor;
+      });
       // get window width and height
       var winWidth = window.innerWidth;
       var winHeight = window.innerHeight;
