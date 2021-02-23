@@ -15,6 +15,9 @@ body {
   height: 6em;
   width: 7em;
 }
+.pixelheartbox:hover {
+  cursor: pointer;
+}
 .pixelheart {
   display: block;
   width: 1em;
