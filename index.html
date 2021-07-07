@@ -1,72 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>ARThous</title>
-    <link rel="stylesheet" lang="text/css" href="style.css" />
-  </head>
 
-  <body>
-    <h1 class="artBox">hello ART</h1>
-    <div class="container">
-      <div class="pixelheartbox">
-        <div class="pixelheart"></div>
-      </div>
-      <div class="blu blips"></div>
-      <div class="blu blips"></div>
-      <div class="blu blips"></div>
-      <div class="blu blips"></div>
-      <div class="blu blips"></div>
-      <div class="blu blips"></div>
-      <div class="blu blips"></div>
+<head>
+  <title>ARThous</title>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  <link rel="stylesheet" lang="text/css" href="style.css" />
+</head>
+
+<body>
+  <h1 class="artBox">hello ART</h1>
+  <div class="container">
+    <div class="pixelheartbox">
+      <div class="pixelheart"></div>
     </div>
-    <script>
-      var heart = document.querySelector(".pixelheart");
-      var heartBox = document.querySelector(".pixelheartbox");
-      var artbox = document.querySelector(".artBox");
-      var divs = document.querySelectorAll(".blu");
-      function dupliheart() {
-        var newHeart = document.createElement("div");
-        newHeart.classList.add("pixelheart");
-        heartBox.append(newHeart);
-        heartBox.append("\r\n");
-      }
-      heartBox.addEventListener("click", function () {
-        dupliheart();
-      });
-      document.body.addEventListener("click", function () {
-        for (var i = 0; i < divs.length; i++) {
-          var thisDiv = divs[i];
+    <div class="list">
+      <ul>
+        <h3>here I made these:</h3>
+        <li><a href="https://americajones.github.io/js-piano/">Keyboard Piano</a></li>
+        <li><a href="https://americajones.github.io/RGBtype">RGB Type</a></li>
+        <li><a href="https://americajones.art/">Art Portfolio</a></li>
+        <li><a href="https://americajones.github.io/projects/">Dev Portfolio</a></li>
+        <li><a href="https://americajones.github.io/chinese-study/">Chinese Study</a></li>
+        <li><a href="https://americajones.github.io/persian-study/">Persian Study</a></li>
+        <li><a href="https://americajones.github.io/kanji-study/">Japanese Study</a></li>
+        <li><a href="https://americajones.github.io/local-schedule/">Local Schedule</a></li>
+        <li><a href="https://americajones.github.io/container-house/">Container House Planner</a></li>
+        <!-- <li><a href="https://americajones.club/">Blog</a></li> -->
+      </ul>
+    </div>
+    <div class="blu blips"></div>
+    <div class="blu blips"></div>
+    <div class="blu blips"></div>
+    <div class="blu blips"></div>
+    <div class="blu blips"></div>
+    <div class="blu blips"></div>
+    <div class="blu blips"></div>
+  </div>
+  <script>
+    var heart = document.querySelector('.pixelheart');
+    var heartBox = document.querySelector('.pixelheartbox');
+    var artbox = document.querySelector('.artBox');
+    var divs = document.querySelectorAll('.blu');
 
-          randomTop = getRandomNumber(0, winHeight - 100);
-          randomLeft = getRandomNumber(0, winWidth - 100);
-
-          thisDiv.style.top = randomTop + "px";
-          thisDiv.style.left = randomLeft + "px";
-        }
-        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
-        console.log(randomColor);
-        artbox.style.color = "#" + randomColor;
-      });
-      // get window width and height
-      var winWidth = window.innerWidth;
-      var winHeight = window.innerHeight;
-      console.log(divs);
+    function dupliheart() {
+      var newHeart = document.createElement('div');
+      newHeart.classList.add('pixelheart');
+      heartBox.append(newHeart);
+      heartBox.append('\r\n');
+    }
+    heartBox.addEventListener('click', function () {
+      dupliheart();
+    });
+    document.body.addEventListener('click', function () {
       for (var i = 0; i < divs.length; i++) {
         var thisDiv = divs[i];
 
-        // get random numbers for each element
-        randomTop = getRandomNumber(0, winHeight);
-        randomLeft = getRandomNumber(0, winWidth);
+        randomTop = getRandomNumber(0, winHeight - 100);
+        randomLeft = getRandomNumber(0, winWidth - 100);
 
-        // update top and left position
-        thisDiv.style.top = randomTop + "px";
-        thisDiv.style.left = randomLeft + "px";
+        thisDiv.style.top = randomTop + 'px';
+        thisDiv.style.left = randomLeft + 'px';
       }
+      let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      console.log(randomColor);
+      artbox.style.color = '#' + randomColor;
+    });
+    // get window width and height
+    var winWidth = window.innerWidth;
+    var winHeight = window.innerHeight;
+    console.log(divs);
+    for (var i = 0; i < divs.length; i++) {
+      var thisDiv = divs[i];
+      randomTop = getRandomNumber(0, winHeight);
+      randomLeft = getRandomNumber(0, winWidth);
+      thisDiv.style.top = randomTop + 'px';
+      thisDiv.style.left = randomLeft + 'px';
+    }
 
-      // function that returns a random number between a min and max
-      function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-      }
-    </script>
-  </body>
+    function getRandomNumber(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+  </script>
+</body>
+
 </html>
